@@ -1,0 +1,22 @@
+{
+  "id": "ed209d5d-6fa9-42de-af7b-7f5b5ec3e8e2",
+  "name": "BC Learning Tracker",
+  "publisher": "Tahiry",
+  "version": "1.0.0.0",
+  "brief": "Suivi de progression de formation Business Central",
+  "description": "Mini-projet de pratique - unite 4",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "24.0.0.0",
+  "application": "29.0.54011.55407",
+  "idRanges": [
+    { "from": 50100, "to": 50149 }
+  ],
+  "runtime": "18.0",
+  "features": [ "NoImplicitWith" ]
+}

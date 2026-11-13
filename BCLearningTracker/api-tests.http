@@ -1,0 +1,36 @@
+@baseUrl = http://bcserver:7048/BC/api
+
+### 1. Lister les entreprises (copiez l'id de votre entreprise ci-dessous)
+GET {{baseUrl}}/v2.0/companies
+Authorization: Basic admin MotDePasse123!
+
+### 2. API standard v2.0 : lister les clients
+@companyId = 233157a0-f5bb-f111-85bd-6045bdfdea7c
+
+GET {{baseUrl}}/v2.0/companies({{companyId}})/customers?$top=5
+Authorization: Basic admin MotDePasse123!
+
+### 3. Votre API : lister les unites
+GET {{baseUrl}}/bclearning/tracker/v1.0/companies({{companyId}})/trainingUnits
+Authorization: Basic admin MotDePasse123!
+
+### 4. Votre API : creer une unite
+POST {{baseUrl}}/bclearning/tracker/v1.0/companies({{companyId}})/trainingUnits
+Authorization: Basic admin MotDePasse123!
+Content-Type: application/json
+
+{
+  "moduleName": "Application Types",
+  "unitNo": 4,
+  "title": "Find development resources"
+}
+
+### 5. Votre API : modifier le statut (remplacez l'id par celui retourne en 3 ou 4)
+PATCH {{baseUrl}}/bclearning/tracker/v1.0/companies({{companyId}})/trainingUnits(ID-DE-L-UNITE)
+Authorization: Basic admin MotDePasse123!
+Content-Type: application/json
+If-Match: *
+
+{
+  "status": "Completed"
+}
